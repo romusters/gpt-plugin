@@ -25,6 +25,9 @@ resource appServicePlan 'Microsoft.Web/serverfarms@2022-09-01' = {
     name: 'Y1'
     tier: 'Dynamic'
   }
+  properties: {
+    reserved: true // This sets the underlying OS to Linux
+  }
 }
 
 resource functionApp 'Microsoft.Web/sites@2022-09-01' = {
